@@ -1,7 +1,12 @@
 {
 	"name" : "amekusa/philes",
-	"description" : "Object-oriented filesystem library written in PHP",
-	"keywords" : ["file", "system", "fs", "oop"],
+	"description" : "Object-oriented filesystem library for PHP",
+	"keywords" : [
+		"file",
+		"system",
+		"fs",
+		"oop"
+	],
 	"homepage" : "http://amekusa.github.io/philes",
 	"license" : "MIT",
 	"authors" : [{
@@ -13,7 +18,7 @@
 	],
 	"require" : {
 		"php" : ">=5.3.5",
-		"amekusa/plz": "^0.9.0"
+		"amekusa/plz" : "^0.9.0"
 	},
 	"require-dev" : {
 		"apigen/apigen" : "^4.1"
