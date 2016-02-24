@@ -12,6 +12,31 @@ abstract class File {
 		$isExclusive;
 
 	/**
+	 * Creates a proper File object from a path
+	 *
+	 * If the path is:
+	 *
+	 * + a directory, creates a {@link Directory} object.
+	 * + a file, creates a {@link Resource} object.
+	 *
+	 * @example Passing a directory path, creates a {@link Directory} object
+	 * ```php
+	 * use amekusa\philes\Directory;
+	 *
+	 * $dir = File::create(__DIR__);
+	 *
+	 * echo 'Is $dir a directory? ';
+	 * echo $dir instanceof Directory ? 'Yes' : 'No';
+	 * ```
+	 * @example Passing a resource path, creates a {@link Resource} object
+	 * ```php
+	 * use amekusa\philes\Resource;
+	 *
+	 * $res = File::create(__FILE__);
+	 *
+	 * echo 'Is $res a resource? ';
+	 * echo $res instanceof Resource ? 'Yes' : 'No';
+	 * ```
 	 * @param string $Path
 	 * @return File
 	 */
@@ -20,6 +45,10 @@ abstract class File {
 		return $r;
 	}
 
+	/**
+	 * Creates a {@link File} object from a path
+	 * @param string $Path File path
+	 */
 	public function __construct($Path) {
 		$this->path = $Path;
 		$this->normalizePath();
