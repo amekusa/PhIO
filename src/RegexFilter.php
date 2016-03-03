@@ -1,4 +1,4 @@
-<?php namespace amekusa\philes;
+<?php namespace amekusa\philes; main::required;
 
 /**
  * @author amekusa <post@amekusa.com>
