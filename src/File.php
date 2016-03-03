@@ -12,30 +12,30 @@ abstract class File {
 		$isExclusive;
 
 	/**
-	 * Creates a proper File object from a path
+	 * Creates a proper object of {@link File} subclass from a path
 	 *
 	 * If the path is:
 	 *
 	 * + a directory, creates a {@link Directory} object.
 	 * + a file, creates a {@link Resource} object.
 	 *
-	 * @example Passing a directory path, creates a {@link Directory} object
+	 * @example Passing an existing directory path, creates a {@link Directory} object
 	 * ```php
 	 * use amekusa\philes\Directory;
 	 *
 	 * $dir = File::create(__DIR__);
 	 *
-	 * echo 'Is $dir a directory? ';
-	 * echo $dir instanceof Directory ? 'Yes' : 'No';
+	 * echo 'Is $dir a directory? - ';
+	 * echo $dir instanceof Directory ? 'Yes.' : 'No.';
 	 * ```
-	 * @example Passing a resource path, creates a {@link Resource} object
+	 * @example Passing an existing regular file path or non-existent path, creates a {@link Resource} object
 	 * ```php
 	 * use amekusa\philes\Resource;
 	 *
 	 * $res = File::create(__FILE__);
 	 *
-	 * echo 'Is $res a resource? ';
-	 * echo $res instanceof Resource ? 'Yes' : 'No';
+	 * echo 'Is $res a regular file? - ';
+	 * echo $res instanceof Resource ? 'Yes.' : 'No.';
 	 * ```
 	 * @param string $Path
 	 * @return File
@@ -43,6 +43,47 @@ abstract class File {
 	public static function create($Path) {
 		$r = is_dir($Path) ? new Directory($Path) : new Resource($Path);
 		return $r;
+	}
+
+	/**
+	 * Returns a {@link File} instance associated with a specific file path
+	 *
+	 * The operation is the same as {@link File}`::create($Path)`
+	 * except for the returned object is cached in {@link FilePool}.
+	 *
+	 * @example Cache Demonstration
+	 * ```php
+	 * $X1 = File::create(__FILE__);         // Not cached
+	 * $Y1 = File::create(__FILE__);         // Not cached
+	 *
+	 * $X2 = File::instance(__FILE__);       // Not cached
+	 * $Y2 = File::instance(__FILE__);       // Cached
+	 *
+	 * $X3 = File::instance(__FILE__, true); // Not cached
+	 * $Y3 = File::instance(__FILE__, true); // Not cached
+	 * $Z3 = File::instance(__FILE__);       // Cached
+	 *
+	 * echo 'Are $X1 and $Y1 identical? - ';
+	 * echo $X1 === $Y1 ? 'Yes.' : 'No.';
+	 * echo "\n";
+	 *
+	 * echo 'Are $X2 and $Y2 identical? - ';
+	 * echo $X2 === $Y2 ? 'Yes.' : 'No.';
+	 * echo "\n";
+	 *
+	 * echo 'Are $X3 and $Y3 identical? - ';
+	 * echo $X3 === $Y3 ? 'Yes.' : 'No.';
+	 * echo "\n";
+	 *
+	 * echo 'Are $Y3 and $Z3 identical? - ';
+	 * echo $Y3 === $Z3 ? 'Yes.' : 'No.';
+	 * ```
+	 * @param string $Path The path of a file
+	 * @param boolean $ForceNew If `true`, always returns a newly created instance of {@link File}
+	 * @return File
+	 */
+	public static function instance($Path, $ForceNew = false) {
+		return FilePool::instance()->get($Path, $ForceNew);
 	}
 
 	/**
