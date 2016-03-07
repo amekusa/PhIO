@@ -11,7 +11,7 @@ abstract class main {
 		if ($done) return;
 
 		set_error_handler(function ($Code, $Msg, $File, $Line, array $Context) {
-			if (strpos($File, __DIR__) !== 0) return false; // Not my fault
+			if (strpos($File, __DIR__) !== 0) return false; // Thrown from outside of the library
 
 			/**
 			 * Handlable errors:
@@ -32,7 +32,9 @@ abstract class main {
 		});
 
 		set_exception_handler(function (\Exception $E) {
-			if (!$E instanceof LocalException) throw $E; // Not my fault
+			$reflection = new \ReflectionObject($E);
+			if (!$reflection->inNamespace()) throw $E; // The exception is out of our namespace
+
 			// TODO: Do special (ex. Show bug-report instructions)
 			throw $E;
 		});
