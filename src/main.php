@@ -33,8 +33,12 @@ abstract class main {
 
 		set_exception_handler(function (\Exception $E) {
 			$reflection = new \ReflectionObject($E);
-			if (!$reflection->inNamespace()) throw $E; // The exception is out of our namespace
+			if (!$reflection->inNamespace()) throw $E; // Passes through the exception that is out of our namespace
 
+			if ($E instanceof RecoverableError) {
+				if (error_reporting() & $E->getSeverity()) $E->trigger(true);
+				return;
+			}
 			// TODO: Do special (ex. Show bug-report instructions)
 			throw $E;
 		});
