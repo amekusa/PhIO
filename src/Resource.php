@@ -1,4 +1,4 @@
-<?php namespace amekusa\philes;
+<?php namespace amekusa\philes; main::required;
 
 /**
  * Resource abstraction
@@ -24,7 +24,7 @@ class Resource extends File {
 
 	/**
 	 * @param string $Mode
-	 * @return Resource This
+	 * @return Resource The object itself
 	 */
 	public function setMode($Mode) {
 		$this->mode = $Mode;
@@ -32,10 +32,16 @@ class Resource extends File {
 	}
 
 	protected function _open() {
-		$this->io = @fopen($this->path, $this->mode ?: 'r');
+		try {
+			$this->io = fopen($this->path, $this->mode ?: 'r');
+		} catch (RecoverableError $E) {
+			throw IOException::create("Couldn't open the file: $this")->setIOFile($this);
+		}
 	}
 
 	protected function _close() {
-		return @fclose($this->io);
+		if (!fclose($this->io))
+			throw IOException::create("Couldn't close the file: $this")->setIOFile($this);
+		return true;
 	}
 }
