@@ -34,18 +34,28 @@ class Directory extends File implements \IteratorAggregate {
 	}
 
 	/**
-	 * @param Filter $Filter
-	 * @return Directory This
+	 * @param string|Filter $Filter
+	 * @return Directory The object itself
 	 */
-	public function addFilter(Filter $Filter) {
+	public function addFilter($Filter) {
 		$this->filters[] = $Filter;
 		return $this;
 	}
 
 	/**
-	 * @param string $Filename
-	 * @return boolean
+	 * Adds a regular expression filter
+	 *
+	 * The operation is the same as:
+	 * ```php
+	 * $this->addFilter(new RegexFilter($Pattern));
+	 * ```
+	 * @param string $Pattern Regular expression
+	 * @return Directory The object itself
 	 */
+	public function addRegexFilter($Pattern) {
+		return $this->addFilter(new RegexFilter($Pattern));
+	}
+
 	protected function filter($Filename) {
 		if (!$this->filters) return true;
 		foreach ($this->filters as $iFilter) {
