@@ -31,7 +31,7 @@ abstract class main {
 			return false;
 		});
 
-		set_exception_handler(function (\Exception $E) {
+		set_exception_handler(function ($E) {
 			$reflection = new \ReflectionObject($E);
 			if (!$reflection->inNamespace()) throw $E; // Passes through the exception that is out of our namespace
 
