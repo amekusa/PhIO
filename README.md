@@ -1,9 +1,7 @@
 # Philes: Object-oriented filesystem library for PHP
-What Philes focuses are:
-
 + Consistent & clear API
 + Encapsulates bothersome
-+ Less type but readable
++ Less typing, but also readable
 + Well tested & documented
 
 ## Install
