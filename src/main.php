@@ -10,7 +10,7 @@ abstract class main {
 		static $done = false;
 		if ($done) return;
 
-		set_error_handler(function ($Code, $Msg, $File, $Line, array $Context) {
+		set_error_handler(function ($Code, $Msg, $File, $Line, $Context) {
 			if (strpos($File, __DIR__) !== 0) return false; // Thrown from outside of the library
 
 			/**
