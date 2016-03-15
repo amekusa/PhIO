@@ -17,7 +17,7 @@ abstract class File {
 	 * If the path is:
 	 *
 	 * + a directory, creates a {@link Directory} object.
-	 * + a file, creates a {@link Resource} object.
+	 * + a file, creates a {@link RegFile} object.
 	 *
 	 * @example Passing an existing directory path, creates a {@link Directory} object
 	 * ```php
@@ -28,20 +28,20 @@ abstract class File {
 	 * echo 'Is $dir a directory? - ';
 	 * echo $dir instanceof Directory ? 'Yes.' : 'No.';
 	 * ```
-	 * @example Passing an existing regular file path or non-existent path, creates a {@link Resource} object
+	 * @example Passing an existing regular file path or non-existent path, creates a {@link RegFile} object
 	 * ```php
-	 * use amekusa\philes\Resource;
+	 * use amekusa\philes\RegFile;
 	 *
-	 * $res = File::create(__FILE__);
+	 * $file = File::create(__FILE__);
 	 *
-	 * echo 'Is $res a regular file? - ';
-	 * echo $res instanceof Resource ? 'Yes.' : 'No.';
+	 * echo 'Is $file a regular file? - ';
+	 * echo $file instanceof RegFile ? 'Yes.' : 'No.';
 	 * ```
 	 * @param string $Path
 	 * @return File
 	 */
 	public static function create($Path) {
-		$r = is_dir($Path) ? new Directory($Path) : new Resource($Path);
+		$r = is_dir($Path) ? new Directory($Path) : new RegFile($Path);
 		return $r;
 	}
 

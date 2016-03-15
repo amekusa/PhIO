@@ -1,10 +1,10 @@
 <?php namespace amekusa\philes; main::required;
 
 /**
- * Resource abstraction
+ * Regular file abstraction
  * @author amekusa <post@amekusa.com>
  */
-class Resource extends File {
+class RegFile extends File {
 	protected
 		$mode;
 
@@ -24,7 +24,7 @@ class Resource extends File {
 
 	/**
 	 * @param string $Mode
-	 * @return Resource The object itself
+	 * @return RegFile The object itself
 	 */
 	public function setMode($Mode) {
 		$this->mode = $Mode;
