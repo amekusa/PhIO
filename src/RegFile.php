@@ -34,7 +34,7 @@ class RegFile extends File {
 	protected function _open() {
 		try {
 			$this->io = fopen($this->path, $this->mode ?: 'r');
-		} catch (RecoverableError $E) {
+		} catch (ErrorException $E) {
 			throw IOException::create("Couldn't open the file: $this")->setIOFile($this);
 		}
 	}
