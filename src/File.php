@@ -14,7 +14,7 @@ abstract class File {
 	/**
 	 * Creates a proper object of {@link File} subclass from a path
 	 *
-	 * If the path is:
+	 * If the path indicates:
 	 *
 	 * + a directory, creates a {@link Directory} object.
 	 * + a file, creates a {@link RegFile} object.
@@ -188,11 +188,14 @@ abstract class File {
 	protected abstract function _close();
 
 	/**
-	 * @param string|Directory $Destination
-	 * @return boolean True on success, False on failure
+	 * Moves this file to another directory
+	 * @param string|Directory $Destination The directory that this file moves to
+	 * @throws IOException on failure
 	 */
 	public function moveTo($Destination) {
-		return rename($this->path, "{$Destination}/{$this->getName()}");
+		$newPath = "{$Destination}/{$this->getName()}";
+		if (!rename($this->path, $newPath)) throw IOException::create()->setIOFile($this);
+		$this->path = $newPath;
 	}
 
 	public function remove() {
