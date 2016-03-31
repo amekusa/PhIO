@@ -18,7 +18,7 @@
 	],
 	"require" : {
 		"php" : ">=5.3.5",
-		"amekusa/plz" : "*"
+		"amekusa/plz" : "<1.0.0"
 	},
 	"require-dev" : {
 		"apigen/apigen" : "^4.1"

@@ -4,29 +4,29 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0536ba797d5a5ccd2e4642e49ed87e6e",
-    "content-hash": "0f1cd3b95add4ced75dc00ed43d18a14",
+    "hash": "61b0442e207b058a95da898ba6bc8c68",
+    "content-hash": "19f64d2d6d305790951c035ffff38d73",
     "packages": [
         {
             "name": "amekusa/plz",
-            "version": "0.9.3",
+            "version": "0.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amekusa/plz.git",
-                "reference": "1e2f7853c176a123c717da0d18851d09308b751f"
+                "reference": "11f9b513ad1b06aa9c279fbad6eb3defad2e771b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amekusa/plz/zipball/1e2f7853c176a123c717da0d18851d09308b751f",
-                "reference": "1e2f7853c176a123c717da0d18851d09308b751f",
+                "url": "https://api.github.com/repos/amekusa/plz/zipball/11f9b513ad1b06aa9c279fbad6eb3defad2e771b",
+                "reference": "11f9b513ad1b06aa9c279fbad6eb3defad2e771b",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.5"
             },
             "require-dev": {
-                "apigen/apigen": "^4.1",
-                "phpunit/phpunit": "5.0.*"
+                "apigen/apigen": "4.*",
+                "phpunit/phpunit": "5.*"
             },
             "type": "library",
             "autoload": {
@@ -54,7 +54,7 @@
                 "sugar",
                 "syntax"
             ],
-            "time": "2016-03-16 07:07:04"
+            "time": "2016-03-31 06:38:52"
         }
     ],
     "packages-dev": [
