@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5f0d892dc9ac85e7a8da0508af4db3d9",
-    "content-hash": "97e1d9e2bc08042f6770116f0341ccec",
+    "hash": "0536ba797d5a5ccd2e4642e49ed87e6e",
+    "content-hash": "0f1cd3b95add4ced75dc00ed43d18a14",
     "packages": [
         {
             "name": "amekusa/plz",
-            "version": "0.9.0",
+            "version": "0.9.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/amekusa/plz.git",
-                "reference": "043c67bc8e9e159b0cc78259de9e74f7e9a0e5dc"
+                "reference": "1e2f7853c176a123c717da0d18851d09308b751f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/amekusa/plz/zipball/043c67bc8e9e159b0cc78259de9e74f7e9a0e5dc",
-                "reference": "043c67bc8e9e159b0cc78259de9e74f7e9a0e5dc",
+                "url": "https://api.github.com/repos/amekusa/plz/zipball/1e2f7853c176a123c717da0d18851d09308b751f",
+                "reference": "1e2f7853c176a123c717da0d18851d09308b751f",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 "sugar",
                 "syntax"
             ],
-            "time": "2016-02-02 09:03:16"
+            "time": "2016-03-16 07:07:04"
         }
     ],
     "packages-dev": [
@@ -874,16 +874,16 @@
         },
         {
             "name": "nette/caching",
-            "version": "v2.4.3",
+            "version": "v2.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/caching.git",
-                "reference": "f60c1767fe5a4b2b45edf2a98cf9dc70c15ea1b1"
+                "reference": "9bcb68939f4387a89dc7be0fb5dcaae98b87976b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/caching/zipball/f60c1767fe5a4b2b45edf2a98cf9dc70c15ea1b1",
-                "reference": "f60c1767fe5a4b2b45edf2a98cf9dc70c15ea1b1",
+                "url": "https://api.github.com/repos/nette/caching/zipball/9bcb68939f4387a89dc7be0fb5dcaae98b87976b",
+                "reference": "9bcb68939f4387a89dc7be0fb5dcaae98b87976b",
                 "shasum": ""
             },
             "require": {
@@ -928,7 +928,7 @@
             ],
             "description": "Nette Caching Component",
             "homepage": "https://nette.org",
-            "time": "2015-11-29 21:35:25"
+            "time": "2016-02-22 01:58:50"
         },
         {
             "name": "nette/component-model",
@@ -1602,16 +1602,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v2.8.2",
+            "version": "v2.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "d0239fb42f98dd02e7d342f793c5d2cdee0c478d"
+                "reference": "9a5aef5fc0d4eff86853d44202b02be8d5a20154"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/d0239fb42f98dd02e7d342f793c5d2cdee0c478d",
-                "reference": "d0239fb42f98dd02e7d342f793c5d2cdee0c478d",
+                "url": "https://api.github.com/repos/symfony/console/zipball/9a5aef5fc0d4eff86853d44202b02be8d5a20154",
+                "reference": "9a5aef5fc0d4eff86853d44202b02be8d5a20154",
                 "shasum": ""
             },
             "require": {
@@ -1658,7 +1658,7 @@
             ],
             "description": "Symfony Console Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-14 08:33:16"
+            "time": "2016-03-17 09:19:04"
         },
         {
             "name": "symfony/options-resolver",
@@ -1717,7 +1717,7 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.1.0",
+            "version": "v1.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
@@ -1776,16 +1776,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v2.8.2",
+            "version": "v2.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "34c8a4b51e751e7ea869b8262f883d008a2b81b8"
+                "reference": "584e52cb8f788a887553ba82db6caacb1d6260bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/34c8a4b51e751e7ea869b8262f883d008a2b81b8",
-                "reference": "34c8a4b51e751e7ea869b8262f883d008a2b81b8",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/584e52cb8f788a887553ba82db6caacb1d6260bb",
+                "reference": "584e52cb8f788a887553ba82db6caacb1d6260bb",
                 "shasum": ""
             },
             "require": {
@@ -1821,20 +1821,20 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2016-01-13 10:28:07"
+            "time": "2016-03-04 07:54:35"
         },
         {
             "name": "tracy/tracy",
-            "version": "v2.3.8",
+            "version": "v2.3.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nette/tracy.git",
-                "reference": "9aa0ade4444def3178aa808255ea326b9e3da9f2"
+                "reference": "0378bbc73ba54be60f90a00faa148768fb723406"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nette/tracy/zipball/9aa0ade4444def3178aa808255ea326b9e3da9f2",
-                "reference": "9aa0ade4444def3178aa808255ea326b9e3da9f2",
+                "url": "https://api.github.com/repos/nette/tracy/zipball/0378bbc73ba54be60f90a00faa148768fb723406",
+                "reference": "0378bbc73ba54be60f90a00faa148768fb723406",
                 "shasum": ""
             },
             "require": {
@@ -1876,7 +1876,7 @@
                 "debugger",
                 "nette"
             ],
-            "time": "2016-01-20 03:14:47"
+            "time": "2016-02-28 21:39:42"
         }
     ],
     "aliases": [],
