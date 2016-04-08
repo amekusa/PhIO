@@ -1,5 +1,7 @@
 <?php namespace amekusa\philes; main::required;
 
+use amekusa\plz\path;
+
 /**
  * File abstraction
  * @author amekusa <post@amekusa.com>
@@ -193,8 +195,9 @@ abstract class File {
 	 * @throws IOException on failure
 	 */
 	public function moveTo($Destination) {
-		$newPath = "{$Destination}/{$this->getName()}";
-		if (!rename($this->path, $newPath)) throw IOException::create()->setIOFile($this);
+		$newPath = path::join_with(DIRECTORY_SEPARATOR, $Destination, $this->getName());
+		if (!rename($this->path, $newPath))
+			throw IOException::create("Failed to rename the file: {$this}")->setIOFile($this);
 		$this->path = $newPath;
 	}
 
