@@ -1,4 +1,4 @@
-<?php namespace amekusa\philes; main::required;
+<?php namespace amekusa\phio; main::required;
 
 use amekusa\plz\path;
 
@@ -23,7 +23,7 @@ abstract class File {
 	 *
 	 * @example Passing an existing directory path, creates a {@link Directory} object
 	 * ```php
-	 * use amekusa\philes\Directory;
+	 * use amekusa\phio\Directory;
 	 *
 	 * $dir = File::create(__DIR__);
 	 *
@@ -32,7 +32,7 @@ abstract class File {
 	 * ```
 	 * @example Passing an existing regular file path or non-existent path, creates a {@link RegFile} object
 	 * ```php
-	 * use amekusa\philes\RegFile;
+	 * use amekusa\phio\RegFile;
 	 *
 	 * $file = File::create(__FILE__);
 	 *

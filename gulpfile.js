@@ -87,7 +87,7 @@ gulp.task('build:src', function () {
 						parsed.push(lines[i]);
 						if (line.match(/^\* ```$/)) { // Ends at "```"
 							var code = context.lines.join('\n');
-							var header = '<?php require "' + __dirname + '/vendor/autoload.php";use amekusa\\philes\\' + cls + ';';
+							var header = '<?php require "' + __dirname + '/vendor/autoload.php";use amekusa\\phio\\' + cls + ';';
 							var executable = tmp.fileSync({
 								prefix: cls.replace('\\', '-') + '-example-at' + i + '_',
 								postfix: '.php'

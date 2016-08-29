@@ -1,5 +1,5 @@
 {
-  "name": "philes",
+  "name": "phio",
   "version": "0.1.0",
   "description": "Object-oriented filesystem library for PHP",
   "main": "src/main.php",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amekusa/philes.git"
+    "url": "git+https://github.com/amekusa/PhiO.git"
   },
   "keywords": [
     "php"
@@ -19,9 +19,9 @@
   "author": "amekusa <post@amekusa.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/amekusa/philes/issues"
+    "url": "https://github.com/amekusa/PhiO/issues"
   },
-  "homepage": "https://github.com/amekusa/philes#readme",
+  "homepage": "https://github.com/amekusa/PhiO#readme",
   "devDependencies": {
     "browser-sync": "^2.10.0",
     "del": "^2.1.0",
