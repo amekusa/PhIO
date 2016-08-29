@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<title>Class amekusa\phio\File | PhiO: Object-oriented filesystem library for PHP</title>
+
+	<link rel="stylesheet" href="resources/bootstrap.min.css?973e37a8502921d56bc02bb55321f45b072b6f71">
+	<link rel="stylesheet" href="resources/style.css?70c1d062672daa3f906b72e4f5d03d4bc5c4174d">
+
+</head>
+
+<body>
+	<nav id="navigation" class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<a href="index.html" class="navbar-brand">PhiO: Object-oriented filesystem library for PHP</a>
+			</div>
+			<div class="collapse navbar-collapse">
+
+                <form id="search" class="navbar-form navbar-left" role="search">
+                    <input type="hidden" name="cx" value="">
+                    <input type="hidden" name="ie" value="UTF-8">
+                    <div class="form-group">
+                        <input type="text" name="q" class="search-query form-control" placeholder="Search">
+					</div>
+				</form>
+
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="namespace-amekusa.phio.html" title="Summary of amekusa\phio"><span>Namespace</span></a>
+					</li>
+					<li class="active">
+<span>Class</span>					</li>
+
+					<li class="divider-vertical"></li>
+
+					<li>
+						<a href="tree.html" title="Tree view of classes, interfaces, traits and exceptions"><span>Tree</span></a>
+					</li>
+
+						<li>
+							<a href="annotation-group-todo.html" title="List of elements with todo annotation">
+								<span>Todo</span>
+							</a>
+						</li>
+
+
+				</ul>
+			</div>
+		</div>
+	</nav>
+
+	<div id="left">
+	<div id="menu">
+
+		<div id="groups">
+				<h3>Namespaces</h3>
+			<ul>
+					<li class="active">
+						<a href="namespace-amekusa.html">
+							amekusa<span></span>
+						</a>
+							<ul>
+					<li class="active main">
+						<a href="namespace-amekusa.phio.html">
+							phio						</a>
+							</li>
+								</ul></li>
+					<li>
+						<a href="namespace-PHP.html">
+							PHP						</a>
+							</li>
+			</ul>
+		</div>
+
+
+		<div id="elements">
+			<h3>Classes</h3>
+			<ul>
+				<li><a href="class-amekusa.phio.Directory.html">Directory</a></li>
+				<li class="active"><a href="class-amekusa.phio.File.html">File</a></li>
+				<li><a href="class-amekusa.phio.FilePool.html">FilePool</a></li>
+				<li><a href="class-amekusa.phio.Filter.html">Filter</a></li>
+				<li><a href="class-amekusa.phio.Perms.html">Perms</a></li>
+				<li><a href="class-amekusa.phio.RegexFilter.html">RegexFilter</a></li>
+				<li><a href="class-amekusa.phio.RegFile.html">RegFile</a></li>
+			</ul>
+
+
+
+			<h3>Exceptions</h3>
+			<ul>
+				<li><a href="class-amekusa.phio.ErrorException.html">ErrorException</a></li>
+				<li><a href="class-amekusa.phio.IOException.html">IOException</a></li>
+			</ul>
+
+
+		</div>
+	</div>
+</div>
+
+<div id="splitter"></div>
+
+<div id="right">
+	<div id="rightInner">
+<div id="content" class="class">
+	<h1>Class File</h1>
+
+
+	<div class="description">
+	<p>File abstraction</p>
+	</div>
+
+
+
+	<div>
+		<h3>Direct known subclasses</h3>
+		<p class="elementList">
+			<code><a href="class-amekusa.phio.Directory.html">amekusa\phio\Directory</a></code>, 
+			<code><a href="class-amekusa.phio.RegFile.html">amekusa\phio\RegFile</a></code>
+		</p>
+	</div>
+
+
+
+
+
+
+	<div class="alert alert-info">
+		<b>Abstract</b><br>
+		
+		<b>Namespace:</b> <a href="namespace-amekusa.html">amekusa</a>\<a href="namespace-amekusa.phio.html">phio</a><br>
+		
+
+				<b>Author:</b>
+				amekusa <a href="&#109;&#x61;&#105;&#x6c;&#116;&#x6f;&#58;&#x70;&#111;&#x73;&#116;&#x40;&#97;&#x6d;&#101;&#x6b;&#117;&#x73;&#97;&#x2e;&#99;&#x6f;&#109;">&#x70;&#111;&#x73;&#116;&#x40;&#97;&#x6d;&#101;&#x6b;&#117;&#x73;&#97;&#x2e;&#99;&#x6f;&#109;</a><br>
+			<b>Located at</b> <a href="source-class-amekusa.phio.File.html#5-219" title="Go to source code">File.php</a>
+		<br>
+	</div>
+
+
+
+		<div class="panel panel-default">
+			<div class="panel-heading"><h2>Methods summary</h2></div>
+			<table class="summary table table-bordered table-striped methods" id="methods">
+		<tr data-order="create" id="_create">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_create">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#16-54" title="Go to source code">create</a>( <span>string <var>$Path</var></span> )</code>
+
+			<div class="description short">
+				<p>Creates a proper object of <code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code> subclass from a path</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Creates a proper object of <code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code> subclass from a path</p>
+
+<p>If the path indicates:</p>
+
+<ul>
+<li>a directory, creates a <code><a href="class-amekusa.phio.Directory.html">amekusa\phio\Directory</a></code> object.</li>
+<li>a file, creates a <code><a href="class-amekusa.phio.RegFile.html">amekusa\phio\RegFile</a></code> object.</li>
+</ul>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$Path</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code>
+					</div>
+
+
+					<h4>Example</h4>
+					<div class="list">
+							<p>Passing an existing directory path, creates a <code><a href="class-amekusa.phio.Directory.html">amekusa\phio\Directory</a></code> object</p>
+
+<pre><span class="php-keyword1">use</span> amekusa\phio\Directory;
+
+<span class="php-var">$dir</span> = <span class="php-keyword2">File</span>::create(__DIR__);
+
+<span class="php-keyword1">echo</span> <span class="php-quote">'Is $dir a directory? - '</span>;
+<span class="php-keyword1">echo</span> <span class="php-var">$dir</span> <span class="php-keyword1">instanceof</span> Directory ? <span class="php-quote">'Yes.'</span> : <span class="php-quote">'No.'</span>;</pre>
+
+<pre>Is <span class="php-var">$dir</span> a directory? - Yes.</pre><br>
+							<p>Passing an existing regular file path or non-existent path, creates a <code><a href="class-amekusa.phio.RegFile.html">amekusa\phio\RegFile</a></code> object</p>
+
+<pre><span class="php-keyword1">use</span> amekusa\phio\RegFile;
+
+<span class="php-var">$file</span> = <span class="php-keyword2">File</span>::create(__FILE__);
+
+<span class="php-keyword1">echo</span> <span class="php-quote">'Is $file a regular file? - '</span>;
+<span class="php-keyword1">echo</span> <span class="php-var">$file</span> <span class="php-keyword1">instanceof</span> RegFile ? <span class="php-quote">'Yes.'</span> : <span class="php-quote">'No.'</span>;</pre>
+
+<pre>Is <span class="php-var">$file</span> a regular <span class="php-keyword2">file</span>? - Yes.</pre><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="instance" id="_instance">
+
+			<td class="attributes"><code>
+				 public static
+				<code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_instance">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#56-101" title="Go to source code">instance</a>( <span>string <var>$Path</var></span>, <span>boolean <var>$ForceNew</var> = <span class="php-keyword1">false</span></span> )</code>
+
+			<div class="description short">
+				<p>Returns a <code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code> instance associated with a specific file path</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Returns a <code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code> instance associated with a specific file path</p>
+
+<p>The operation is the same as <code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code><code>::create($Path)</code>
+except for the returned object is cached in <code><a href="class-amekusa.phio.FilePool.html">amekusa\phio\FilePool</a></code>.</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$Path</var></dt>
+						<dd>The path of a file</dd>
+						<dt><var>$ForceNew</var></dt>
+						<dd>If <code>true</code>, always returns a newly created instance of <code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code>
+					</div>
+
+
+					<h4>Example</h4>
+					<div class="list">
+							<p>Cache Demonstration</p>
+
+<pre><span class="php-var">$X1</span> = <span class="php-keyword2">File</span>::create(__FILE__);         <span class="php-comment">// Not cached</span>
+<span class="php-var">$Y1</span> = <span class="php-keyword2">File</span>::create(__FILE__);         <span class="php-comment">// Not cached</span>
+
+<span class="php-var">$X2</span> = <span class="php-keyword2">File</span>::instance(__FILE__);       <span class="php-comment">// Not cached</span>
+<span class="php-var">$Y2</span> = <span class="php-keyword2">File</span>::instance(__FILE__);       <span class="php-comment">// Cached</span>
+
+<span class="php-var">$X3</span> = <span class="php-keyword2">File</span>::instance(__FILE__, <span class="php-keyword1">true</span>); <span class="php-comment">// Not cached</span>
+<span class="php-var">$Y3</span> = <span class="php-keyword2">File</span>::instance(__FILE__, <span class="php-keyword1">true</span>); <span class="php-comment">// Not cached</span>
+<span class="php-var">$Z3</span> = <span class="php-keyword2">File</span>::instance(__FILE__);       <span class="php-comment">// Cached</span>
+
+<span class="php-keyword1">echo</span> <span class="php-quote">'Are $X1 and $Y1 identical? - '</span>;
+<span class="php-keyword1">echo</span> <span class="php-var">$X1</span> === <span class="php-var">$Y1</span> ? <span class="php-quote">'Yes.'</span> : <span class="php-quote">'No.'</span>;
+<span class="php-keyword1">echo</span> <span class="php-quote">&quot;\n&quot;</span>;
+
+<span class="php-keyword1">echo</span> <span class="php-quote">'Are $X2 and $Y2 identical? - '</span>;
+<span class="php-keyword1">echo</span> <span class="php-var">$X2</span> === <span class="php-var">$Y2</span> ? <span class="php-quote">'Yes.'</span> : <span class="php-quote">'No.'</span>;
+<span class="php-keyword1">echo</span> <span class="php-quote">&quot;\n&quot;</span>;
+
+<span class="php-keyword1">echo</span> <span class="php-quote">'Are $X3 and $Y3 identical? - '</span>;
+<span class="php-keyword1">echo</span> <span class="php-var">$X3</span> === <span class="php-var">$Y3</span> ? <span class="php-quote">'Yes.'</span> : <span class="php-quote">'No.'</span>;
+<span class="php-keyword1">echo</span> <span class="php-quote">&quot;\n&quot;</span>;
+
+<span class="php-keyword1">echo</span> <span class="php-quote">'Are $Y3 and $Z3 identical? - '</span>;
+<span class="php-keyword1">echo</span> <span class="php-var">$Y3</span> === <span class="php-var">$Z3</span> ? <span class="php-quote">'Yes.'</span> : <span class="php-quote">'No.'</span>;</pre>
+
+<pre>Are <span class="php-var">$X1</span> <span class="php-keyword1">and</span> <span class="php-var">$Y1</span> identical? - No.
+Are <span class="php-var">$X2</span> <span class="php-keyword1">and</span> <span class="php-var">$Y2</span> identical? - Yes.
+Are <span class="php-var">$X3</span> <span class="php-keyword1">and</span> <span class="php-var">$Y3</span> identical? - No.
+Are <span class="php-var">$Y3</span> <span class="php-keyword1">and</span> <span class="php-var">$Z3</span> identical? - Yes.</pre><br>
+					</div>
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__construct" id="___construct">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___construct">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#103-110" title="Go to source code">__construct</a>( <span>string <var>$Path</var></span> )</code>
+
+			<div class="description short">
+				<p>Creates a <code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code> object from a path</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Creates a <code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code> object from a path</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$Path</var></dt>
+						<dd>File path</dd>
+					</dl></div>
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="__toString" id="___toString">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#___toString">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#112-114" title="Go to source code">__toString</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isExclusive" id="_isExclusive">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isExclusive">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#116-118" title="Go to source code">isExclusive</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="isOpened" id="_isOpened">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_isOpened">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#120-122" title="Go to source code">isOpened</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="exists" id="_exists">
+
+			<td class="attributes"><code>
+				 public 
+				boolean
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_exists">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#124-129" title="Go to source code">exists</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						boolean
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPath" id="_getPath">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPath">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#131-136" title="Go to source code">getPath</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getName" id="_getName">
+
+			<td class="attributes"><code>
+				 public 
+				string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getName">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#138-143" title="Go to source code">getName</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="getPerms" id="_getPerms">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-amekusa.phio.Perms.html">amekusa\phio\Perms</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_getPerms">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#145-155" title="Go to source code">getPerms</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-amekusa.phio.Perms.html">amekusa\phio\Perms</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="modifiedAt" id="_modifiedAt">
+
+			<td class="attributes"><code>
+				 public 
+				integer|string
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_modifiedAt">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#157-164" title="Go to source code">modifiedAt</a>( <span>string <var>$Format</var> = <span class="php-quote">''</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$Format</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						integer|string
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="beExclusive" id="_beExclusive">
+
+			<td class="attributes"><code>
+				 public 
+				<code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code>
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_beExclusive">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#166-173" title="Go to source code">beExclusive</a>( <span>boolean <var>$IsExclusive</var> = <span class="php-keyword1">true</span></span> )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$IsExclusive</var></dt>
+						<dd></dd>
+					</dl></div>
+
+					<h4>Returns</h4>
+					<div class="list">
+						<code><a href="class-amekusa.phio.File.html">amekusa\phio\File</a></code>
+					</div>
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="open" id="_open">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_open">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#179-187" title="Go to source code">open</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="close" id="_close">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_close">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#191-200" title="Go to source code">close</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="moveTo" id="_moveTo">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_moveTo">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#204-214" title="Go to source code">moveTo</a>( <span>string|<code><a href="class-amekusa.phio.Directory.html">amekusa\phio\Directory</a></code> <var>$Destination</var></span> )</code>
+
+			<div class="description short">
+				<p>Moves this file to another directory</p>
+			</div>
+
+			<div class="description detailed hidden">
+				<p>Moves this file to another directory</p>
+
+
+					<h4>Parameters</h4>
+					<div class="list"><dl>
+						<dt><var>$Destination</var></dt>
+						<dd>The directory that this file moves to</dd>
+					</dl></div>
+
+
+					<h4>Throws</h4>
+					<div class="list">
+						<code><a href="class-amekusa.phio.IOException.html">amekusa\phio\IOException</a></code><br>on failure
+					</div>
+
+
+
+			</div>
+			</div></td>
+		</tr>
+		<tr data-order="remove" id="_remove">
+
+			<td class="attributes"><code>
+				 public 
+				
+				
+				</code>
+			</td>
+
+			<td class="name"><div>
+			<a class="anchor" href="#_remove">#</a>
+			<code><a href="source-class-amekusa.phio.File.html#216-218" title="Go to source code">remove</a>( )</code>
+
+			<div class="description short">
+				
+			</div>
+
+			<div class="description detailed hidden">
+				
+
+
+
+
+
+
+
+			</div>
+			</div></td>
+		</tr>
+			</table>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+</div>
+	</div>
+
+	<div id="footer">
+		PhiO: Object-oriented filesystem library for PHP API documentation generated by <a href="http://apigen.org">ApiGen</a>
+	</div>
+</div>
+<script src="resources/combined.js"></script>
+<script src="elementlist.js"></script>
+</body>
+</html>
