@@ -1,6 +1,6 @@
 {
   "name": "phio",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Object-oriented filesystem library for PHP",
   "main": "src/main.php",
   "directories": {
