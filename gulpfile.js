@@ -172,7 +172,8 @@ gulp.task('watch', ['docs'], function () {
 	gulp.watch([
 		paths.src + '/**/*.php',
 		paths.pkg,
-		paths.docsConf
+		paths.docsConf,
+		'./README.md'
 	], function (event) {
 		series('docs', 'reload'); // Run tasks synchronously
 	});

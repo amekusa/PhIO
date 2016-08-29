@@ -1,4 +1,8 @@
+/.publish/
+/build/
+/docs/
 
+##### DO NOT EDIT BELOW DIRECTLY #####
 # Created by https://www.gitignore.io/api/osx,linux,windows,eclipse,composer
 
 ### OSX ###
