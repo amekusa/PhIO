@@ -1,8 +1,9 @@
-# PhiO: Object-oriented filesystem library for PHP
+# [PhiO](https://amekusa.github.io/PhiO/): Object-oriented filesystem library for PHP
 + Consistent & clear API
 + Encapsulates bothersome
 + Less typing, but also readable
-+ Well tested & documented
++ Well tested & documented  
+  [:blue_book: See the complete documentation](https://amekusa.github.io/PhiO/)
 
 ## Install
 Install via Composer.
