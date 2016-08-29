@@ -1,5 +1,5 @@
 {
-	"name" : "amekusa/philes",
+	"name" : "amekusa/phio",
 	"description" : "Object-oriented filesystem library for PHP",
 	"keywords" : [
 		"file",
@@ -7,7 +7,7 @@
 		"fs",
 		"oop"
 	],
-	"homepage" : "http://amekusa.github.io/philes",
+	"homepage" : "http://amekusa.github.io/phio",
 	"license" : "MIT",
 	"authors" : [{
 			"name" : "amekusa",
@@ -25,7 +25,7 @@
 	},
 	"autoload" : {
 		"psr-4" : {
-			"amekusa\\philes\\" : "src"
+			"amekusa\\phio\\" : "src"
 		}
 	}
 }

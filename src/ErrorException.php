@@ -1,4 +1,4 @@
-<?php namespace amekusa\philes; main::required;
+<?php namespace amekusa\phio; main::required;
 
 /**
  * A catchable error representation

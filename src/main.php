@@ -1,4 +1,4 @@
-<?php namespace amekusa\philes;
+<?php namespace amekusa\phio;
 
 /**
  * @ignore

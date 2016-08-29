@@ -11,10 +11,10 @@ extensions: [php]
 charset: [UTF-8]
 
 # Main project name prefix
-main: amekusa\philes
+main: amekusa\phio
 
 # Title of generated documentation
-title: "Philes: Object-oriented filesystem library for PHP"
+title: "PhiO: Object-oriented filesystem library for PHP"
 
 # Documentation base URL
 #baseUrl:
