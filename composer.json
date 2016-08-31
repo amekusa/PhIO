@@ -16,12 +16,18 @@
 			"role" : "Developer"
 		}
 	],
+	"repositories" : [{
+			"url" : "https://github.com/amekusa/PhiODocsTheme.git",
+			"type" : "git"
+		}
+	],
 	"require" : {
 		"php" : ">=5.3.5",
 		"amekusa/plz" : "<1.0.0"
 	},
 	"require-dev" : {
-		"apigen/apigen" : "^4.1"
+		"apigen/apigen" : "^4.1",
+		"amekusa/theme-phio" : "dev-master"
 	},
 	"autoload" : {
 		"psr-4" : {
