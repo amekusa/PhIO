@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "76b439b04f4ef83e9370eb59cd4b02ef",
-    "content-hash": "2d44e6d14d6b4492b236f063238b9741",
+    "hash": "0260f7ddd0885a0938c969468ea05fcb",
+    "content-hash": "10579d61d11b49256b82283fbe94c3ba",
     "packages": [
         {
             "name": "amekusa/plz",
@@ -58,6 +58,39 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "amekusa/theme-phio",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/amekusa/PhiODocsTheme.git",
+                "reference": "7d35900fb93147418145f0d62065042aa2a515cb"
+            },
+            "require": {
+                "latte/latte": "~2.2"
+            },
+            "type": "library",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "amekusa",
+                    "email": "post@amekusa.com"
+                },
+                {
+                    "name": "Tomáš Votruba",
+                    "email": "tomas.vot@gmail.com"
+                },
+                {
+                    "name": "Olivier Laviale",
+                    "homepage": "https://github.com/olvlvl"
+                }
+            ],
+            "description": "ApiGen theme for PhiO",
+            "homepage": "https://amekusa.github.io/PhiO/",
+            "time": "2016-08-31 09:31:20"
+        },
         {
             "name": "andrewsville/php-token-reflection",
             "version": "1.4.0",
@@ -1919,7 +1952,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "amekusa/theme-phio": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

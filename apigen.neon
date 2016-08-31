@@ -26,10 +26,10 @@ title: "PhiO: Object-oriented filesystem library for PHP"
 #googleAnalytics:
 
 # Template theme
-templateTheme: bootstrap
+#templateTheme: bootstrap
 
 # Template config file
-#templateConfig:
+templateConfig: "./vendor/amekusa/theme-phio/src/config.neon"
 
 # Grouping of classes
 groups: auto
