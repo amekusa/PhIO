@@ -1,3 +1,24 @@
+'use strict';
+
+var // Modules
+	gulp = require('gulp'),
+	g = require('gulp-load-plugins')(),
+	series = require('run-sequence'), // TODO Replace with gulp.series on Gulp 4.0 release
+
+	sh = require('child_process'),
+	args = require('yargs').argv,
+
+	fs = require('fs'),
+	path = require('path'),
+	del = require('del'),
+	tmp = require('tmp'),
+
+	util = require('util'),
+	transform = require('vinyl-transform'),
+	map = require('map-stream'),
+	bsync = require('browser-sync'),
+	emoji = require('node-emoji');
+
 var paths = {
 	pkg: 'package.json',
 	src: 'src',
@@ -8,28 +29,14 @@ var paths = {
 };
 
 var pkg = require('./' + paths.pkg);
-var gulp = require('gulp');
-var g = require('gulp-load-plugins')();
-var series = require('run-sequence'); // TODO Replace with gulp.series on Gulp 4.0 release
-var bsync = require('browser-sync');
-var sh = require('child_process');
-var del = require('del');
-var util = require('util');
-var fs = require('fs');
-var path = require('path');
-var tmp = require('tmp');
-var transform = require('vinyl-transform');
-var map = require('map-stream');
-var emoji = require('node-emoji');
 
-var neon = require('neon-js');
-var docsConf = neon.decode(fs.readFileSync(paths.docsConf, 'utf8'));
-
-var args = require('yargs').argv;
 var mode = {
 	clean: args.c || args.clean
 };
 
+/**
+ * Shortcut Tasks
+ */
 gulp.task('default', ['build']);
 gulp.task('build', ['docs']);
 gulp.task('clean', ['build:clean', 'docs:clean']);
@@ -168,9 +175,7 @@ gulp.task('reload', function (done) {
 
 gulp.task('watch', ['docs'], function () {
 	bsync.init({
-		server: {
-			baseDir: paths.docs
-		}
+		server: {baseDir: paths.docs}
 	});
 	gulp.watch([
 		paths.src + '/**/*.php',
