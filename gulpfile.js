@@ -22,6 +22,9 @@ var transform = require('vinyl-transform');
 var map = require('map-stream');
 var emoji = require('node-emoji');
 
+var neon = require('neon-js');
+var docsConf = neon.decode(fs.readFileSync(paths.docsConf, 'utf8'));
+
 var args = require('yargs').argv;
 var mode = {
 	clean: args.c || args.clean
@@ -173,6 +176,7 @@ gulp.task('watch', ['docs'], function () {
 		paths.src + '/**/*.php',
 		paths.pkg,
 		paths.docsConf,
+		path.dirname(docsConf.get('templateConfig')) + '/**/*',
 		'./README.md'
 	], function (event) {
 		series('docs', 'reload'); // Run tasks synchronously
