@@ -17,7 +17,8 @@ var // Modules
 	transform = require('vinyl-transform'),
 	map = require('map-stream'),
 	bsync = require('browser-sync'),
-	emoji = require('node-emoji');
+	emoji = require('node-emoji'),
+	neon = require('neon-js');
 
 var paths = {
 	pkg: 'package.json',
@@ -29,6 +30,7 @@ var paths = {
 };
 
 var pkg = require('./' + paths.pkg);
+var docsConf = neon.decode(fs.readFileSync(paths.docsConf, 'utf8'));
 
 var mode = {
 	clean: args.c || args.clean
